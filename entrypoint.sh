@@ -7,6 +7,6 @@ chmod 600 /root/.ssh/$4
 
 ssh-keyscan $1 >> /root/.ssh/known_hosts
 
-ssh -T -q -o StrictHostKeyChecking=no $3@$1
+ssh -vvv -T -q -o StrictHostKeyChecking=no $3@$1
 
-ssh -i /root/.ssh/id_ed25519 $3@$1 -p $2 "$6"
+ssh -vvv -i /root/.ssh/id_ed25519 $3@$1 -p $2 "$6"
