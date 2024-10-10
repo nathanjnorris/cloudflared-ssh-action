@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk update
-RUN apk add openssh
+RUN apk add openssh --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main
 RUN apk add curl
 RUN curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -o /usr/bin/cloudflared
 RUN chmod +x /usr/bin/cloudflared
